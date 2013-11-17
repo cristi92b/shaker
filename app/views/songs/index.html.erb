@@ -4,3 +4,9 @@
 <% else %>
 	<%= render partial: 'song_list_item', collection: @songs , as: "song" %>
 <% end %>
+
+<br>
+<hr>
+<br>
+
+<%= link_to "Add song", new_song_path  %>

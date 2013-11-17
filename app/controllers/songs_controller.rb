@@ -4,10 +4,12 @@ class SongsController < ApplicationController
 		@songs = Song.all
 	end
 	def create 
+		song = Song.create(params[:song])
 		
+		redirect_to songs_path
 	end
 	def new
-	
+		@song = Song.new
 	end
 	def update
 	

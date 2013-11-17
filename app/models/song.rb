@@ -1,6 +1,9 @@
 require 'songs'
+require 'active_model'
 
 class Song
+  include ActiveModel::Model
+
   attr_reader :title, :artist
 
   @@songs = []
@@ -10,7 +13,7 @@ class Song
         @@songs << Song.new(params)
      end
   end
-  def initialize(opts)
+  def initialize(opts={})
      @title=opts[:title]
      @artist=opts[:artist]
   end
@@ -24,3 +27,4 @@ class Song
 end
 
 Song.create title: "titlu" , artist: "artist"
+Song.create title: "titlu2" , artist: "artist2"
