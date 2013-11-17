@@ -26,5 +26,5 @@ class Song
   end
 end
 
-Song.create title: "titlu" , artist: "artist"
-Song.create title: "titlu2" , artist: "artist2"
+#Song.create title: "titlu" , artist: "artist"
+#Song.create title: "titlu2" , artist: "artist2"
