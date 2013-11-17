@@ -1,6 +1,6 @@
-<h1>All these songs</h1>
-<ul class="list">
-  <%- @songs.each do |song| -%>
-    <li><%= song.title %></li>
-  <%- end -%>
-</ul>
+
+<% if @songs.empty? %>
+ "Nu este niciun cantec"
+<% else %>
+	<%= render partial: 'song_list_item', collection: @songs , as: "song" %>
+<% end %>

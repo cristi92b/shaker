@@ -5,6 +5,15 @@ class Song
 
   @@songs = []
 
+  class << self
+     def create(params = {})
+        @@songs << Song.new(params)
+     end
+  end
+  def initialize(opts)
+     @title=opts[:title]
+     @artist=opts[:artist]
+  end
   def self.all
     @@songs
   end
@@ -13,3 +22,5 @@ class Song
     @@songs = []
   end
 end
+
+Song.create title: "titlu" , artist: "artist"
